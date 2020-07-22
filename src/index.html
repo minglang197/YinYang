@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lucidity的简历</title>
+</head>
+
+<body>
+    <style id="style"></style>
+    <div id="demo"></div>
+    <div id="wapper">
+        <div id="div1"></div>
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        *::before {
+            box-sizing: border-box;
+        }
+
+        *::after {
+            box-sizing: border-box;
+        }
+
+        #demo {
+            word-break: break-all;
+        }
+
+        #div1 {
+            position: fixed;
+            top: 100px;
+            right: 100px;
+        }
+
+        #div1::before {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+
+        #div1::after {
+            content: "";
+            display: block;
+            position: absolute;
+
+        }
+
+        @media (max-width: 500px) {
+            #demo {
+                height: 50vh;
+                overflow: auto;
+            }
+
+            #wapper {
+                height: 50vh;
+            }
+
+            #div1 {
+                position: relative;
+                height: 200px;
+                width: 200px;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #div1::before {
+                height: 100px;
+                width: 100px;
+
+            }
+
+            #div1::after {
+                height: 100px;
+                width: 100px;
+
+            }
+        }
+    </style>
+    <script src="index.js"></script>
+</body>
+
+</html>
